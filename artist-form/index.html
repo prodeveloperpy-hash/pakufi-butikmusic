@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BUTIK® — Artist Application</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/base.css">
+<link rel="stylesheet" href="form.css">
+</head>
+<body>
+<div id="rail"></div>
+
+<div class="wrap" id="formWrap">
+
+  <header class="hero">
+    <div class="eyebrow">Artist Application</div>
+    <h1 class="hero-title">Apply to join</h1>
+    <img class="logo-mark" src="../assets/logo_red.svg" alt="BUTIK®">
+    <p class="lede">We represent artists with a distinct voice, a clear artistic direction, and a long-term vision. We're always looking for exceptional DJs, producers, live acts, musicians and multidisciplinary artists. If you believe your art & work aligns with BUTIK, we'd love to hear from you.</p>
+  </header>
+
+  <form id="butikForm" novalidate>
+
+    <!-- 1 -->
+    <section class="block">
+      <div class="sec-head"><span class="sec-num">01</span><span class="sec-title">Personal Information</span></div>
+      <div class="row2">
+        <div class="field"><label class="required">Full Name</label><input type="text" id="fullName" required></div>
+        <div class="field"><label>Artist Name</label><input type="text" id="artistName"></div>
+      </div>
+      <div class="row2">
+        <div class="field"><label class="required">Email Address</label><input type="email" id="email" required></div>
+        <div class="field"><label class="required">Phone Number</label><input type="tel" id="phone" required></div>
+      </div>
+      <div class="row2">
+        <div class="field"><label class="required">Country</label><input type="text" id="country" required></div>
+        <div class="field"><label class="required">City</label><input type="text" id="city" required></div>
+      </div>
+      <div class="row2">
+        <div class="field"><label>Nationality</label><input type="text" id="nationality"></div>
+        <div class="field"><label>Date of Birth</label><input type="date" id="dob"></div>
+      </div>
+    </section>
+
+    <!-- 2 -->
+    <section class="block">
+      <div class="sec-head"><span class="sec-num">02</span><span class="sec-title">Artist Profile</span></div>
+      <div class="field">
+        <label class="required">Primary Discipline</label>
+        <select id="discipline" required>
+          <option value="">Select...</option>
+          <option>DJ</option><option>Producer</option><option>Live Act</option>
+          <option>Band</option><option>Vocalist</option><option>Musician</option>
+          <option>Hybrid Live</option><option>Other</option>
+        </select>
+      </div>
+      <div class="field" id="disciplineOtherField" style="display:none;">
+        <label>Please Specify</label>
+        <input type="text" id="disciplineOther" placeholder="Tell us what you do">
+      </div>
+      <div class="field">
+        <label>Genres <span class="note">(multi-select)</span></label>
+        <div class="chip-group" id="genreGroup"></div>
+      </div>
+      <div class="field" id="genreOtherField" style="display:none;">
+        <label>Please Specify</label>
+        <input type="text" id="genreOther" placeholder="Tell us what genre(s)">
+      </div>
+      <div class="row2">
+        <div class="field"><label>Years Active</label><input type="text" id="yearsActive" placeholder="e.g. 5"></div>
+        <div class="field"><label>Current Location</label><input type="text" id="currentLocation"></div>
+      </div>
+    </section>
+
+    <!-- 3 -->
+    <section class="block">
+      <div class="sec-head"><span class="sec-num">03</span><span class="sec-title">About You</span></div>
+      <div class="field">
+        <label>Short Bio <span class="note">(150–300 words)</span></label>
+        <textarea id="bio" style="min-height:160px" placeholder="Tell us about your artistic vision, what inspires your music, and what makes your project unique."></textarea>
+        <div class="charcount" id="bioCount">0 words</div>
+      </div>
+    </section>
+
+    <!-- 4 -->
+    <section class="block">
+      <div class="sec-head"><span class="sec-num">04</span><span class="sec-title">Music &amp; Portfolio</span></div>
+      <p class="sec-intro">Can't provide a link or file for something below? Leave it blank.</p>
+      <div class="row2">
+        <div class="field"><label>Spotify</label><input type="url" id="spotify" placeholder="https://"></div>
+        <div class="field"><label>SoundCloud</label><input type="url" id="soundcloud" placeholder="https://"></div>
+      </div>
+      <div class="row2">
+        <div class="field"><label>Bandcamp</label><input type="url" id="bandcamp" placeholder="https://"></div>
+        <div class="field"><label>Apple Music</label><input type="url" id="appleMusic" placeholder="https://"></div>
+      </div>
+      <div class="row2">
+        <div class="field"><label>Beatport</label><input type="url" id="beatport" placeholder="https://"></div>
+        <div class="field"><label>YouTube</label><input type="url" id="youtube" placeholder="https://"></div>
+      </div>
+      <div class="row2">
+        <div class="field"><label>Instagram</label><input type="url" id="instagram" placeholder="https://"></div>
+        <div class="field"><label>Resident Advisor</label><input type="url" id="ra" placeholder="https://"></div>
+      </div>
+      <div class="field"><label>Website</label><input type="url" id="website" placeholder="https://"></div>
+      <div class="row3">
+        <div class="field"><label>Press Kit</label><input type="url" id="pressKit" placeholder="Drive / Dropbox link"><div class="hint">Paste a shareable link (PDF)</div></div>
+        <div class="field"><label>Artist Photos</label><input type="url" id="photos" placeholder="Drive / Dropbox link"><div class="hint">Paste a shareable link</div></div>
+        <div class="field"><label>Logo (optional)</label><input type="url" id="logo" placeholder="Drive / Dropbox link"></div>
+      </div>
+    </section>
+
+    <!-- 5 -->
+    <section class="block">
+      <div class="sec-head"><span class="sec-num">05</span><span class="sec-title">Music</span></div>
+      <div class="field">
+        <label>Tracks — Private Links</label>
+        <input type="url" id="trackLinks" placeholder="SoundCloud / Dropbox / Google Drive link to your latest tracks">
+      </div>
+      <div class="row2">
+        <div class="field"><label>Latest Release</label><input type="text" id="latestRelease"></div>
+        <div class="field"><label>Upcoming Releases</label><input type="text" id="upcomingReleases"></div>
+      </div>
+      <div class="field"><label>Labels You've Released On</label><input type="text" id="labels"></div>
+    </section>
+
+    <!-- 6 -->
+    <section class="block">
+      <div class="sec-head"><span class="sec-num">06</span><span class="sec-title">Performance Experience</span></div>
+      <div class="field"><label>Countries Performed In</label><input type="text" id="countriesPerformed"></div>
+      <div class="field"><label>Notable Clubs / Festivals</label><textarea id="notableVenues"></textarea></div>
+      <div class="field"><label>Recent Gigs</label><textarea id="recentGigs"></textarea></div>
+      <div class="field"><label>Upcoming Bookings</label><textarea id="upcomingBookings"></textarea></div>
+      <div class="field"><label>Touring Availability</label><input type="text" id="touringAvailability"></div>
+      <div class="row2">
+        <div class="field">
+          <label>Passport Available?</label>
+          <div class="radio-group chip-group" id="passportGroup"></div>
+        </div>
+        <div class="field"><label>Visa Restrictions?</label><input type="text" id="visaRestrictions"></div>
+      </div>
+    </section>
+
+    <!-- 7 -->
+    <section class="block">
+      <div class="sec-head"><span class="sec-num">07</span><span class="sec-title">Representation</span></div>
+      <div class="field">
+        <label>Are You Currently Represented?</label>
+        <div class="chip-group" id="repGroup"></div>
+      </div>
+      <div class="row2">
+        <div class="field"><label>Agency / Manager Name</label><input type="text" id="repName"></div>
+        <div class="field"><label>Is Your Agreement Exclusive?</label><input type="text" id="repExclusive"></div>
+      </div>
+    </section>
+
+    <!-- 8 -->
+    <section class="block">
+      <div class="sec-head"><span class="sec-num">08</span><span class="sec-title">Social Presence</span></div>
+      <div class="row3">
+        <div class="field"><label>Instagram Followers</label><input type="number" id="igFollowers" min="0"></div>
+        <div class="field"><label>Spotify Monthly Listeners</label><input type="number" id="spotifyListeners" min="0"></div>
+        <div class="field"><label>YouTube Subscribers</label><input type="number" id="ytSubs" min="0"></div>
+      </div>
+      <div class="field"><label>Newsletter / Mailing List (optional)</label><input type="text" id="newsletter"></div>
+    </section>
+
+    <!-- 9 -->
+    <section class="block">
+      <div class="sec-head"><span class="sec-num">09</span><span class="sec-title">Why BUTIK?</span></div>
+      <div class="field"><label>Why Do You Want to Join BUTIK?</label><textarea id="whyButik"></textarea></div>
+      <div class="field"><label>What Are Your Goals Over the Next 2 Years?</label><textarea id="goals"></textarea></div>
+      <div class="field"><label>How Do You Think BUTIK Can Help Your Career?</label><textarea id="howHelp"></textarea></div>
+    </section>
+
+    <!-- 10 -->
+    <section class="block">
+      <div class="sec-head"><span class="sec-num">10</span><span class="sec-title">Additional Information</span></div>
+      <div class="field"><label>Anything Else You'd Like Us to Know?</label><textarea id="additional"></textarea></div>
+
+      <div class="decl-group">
+        <p class="decl-title">Declaration</p>
+        <div class="decl"><input type="checkbox" id="d1" required><label for="d1">I confirm that all information provided is accurate.</label></div>
+        <div class="decl"><input type="checkbox" id="d2" required><label for="d2">I understand that submitting this application does not guarantee representation.</label></div>
+        <div class="decl"><input type="checkbox" id="d3" required><label for="d3">I agree to BUTIK reviewing my materials and contacting me regarding my application.</label></div>
+      </div>
+    </section>
+
+    <div class="submit-block">
+      <button type="submit" id="submitBtn">SUBMIT APPLICATION</button>
+      <div class="err" id="errMsg">Please complete all required fields and confirm the declarations above.</div>
+    </div>
+
+  </form>
+
+  <footer class="foot">BUTIK® — SOUND WITH INTENTION</footer>
+</div>
+
+<div id="successScreen">
+  <span class="tick">✓</span>
+  <h2>APPLICATION RECEIVED</h2>
+  <p>Thank you for applying to BUTIK. We review every submission carefully — if there's alignment, our team will be in touch.</p>
+</div>
+
+<script src="form.js"></script>
+</body>
+</html>
