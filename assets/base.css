@@ -1,0 +1,20 @@
+/* Shared brand foundation — used by both the landing page and the artist form. */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --brand-red: #ef290f;
+  --brand-red-hover: #ff3a1c;
+  --brand-white: #ffffff;
+  --font-sans:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+}
